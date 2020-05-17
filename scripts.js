@@ -47,21 +47,22 @@ function totalMonthlyCost(array) {
     console.log('in totalMonthlyCost');
     let intTotalMonthlyCost = 0;
     for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        intTotalMonthlyCost += element;
+            const element = array[i];
+            intTotalMonthlyCost += element;
     }
     console.log(intTotalMonthlyCost);
     $('#monthlyCosts').empty();
     $('#monthlyCosts').append(intTotalMonthlyCost);
-    if (intTotalMonthlyCost > 20000) {
-        $('#costBackground').addClass('red');
-    }
-    else{
-
-    }
+    redAlert(intTotalMonthlyCost);
 }
 
 function appendToDom(value){
     $('#monthlyCosts').empty();
     $('#monthlyCosts').append(value)
+}
+
+function redAlert(value){
+    if (value >=20000) {
+        $('.costBackground').addClass('red')
+    }
 }
