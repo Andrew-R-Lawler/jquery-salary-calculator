@@ -9,7 +9,7 @@ let intTotalMonthlyCost = 0;
 function onReady() {
     console.log('in jquery');
     $('#submitButton').on('click', handleSubmit);
-    $('#list').on('click', '#deleteButton', removeEmployee);
+    $('#list').on('click', '.deleteButton', removeEmployee);
 }
 
 function handleSubmit(){
@@ -62,7 +62,7 @@ function appendToDom(array){
     $('#list').empty();
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-        $('#list').append(`<li>${element.firstName} ${element.lastName}; ID Number: ${element.idNumber}, Job Title: ${element.jobTitle}, Annual Salary: ${element.annualSalary} <button id = 'deleteButton'>Delete</button>`)
+        $('#list').append(`<li>${element.firstName} ${element.lastName}; ID Number: ${element.idNumber}, Job Title: ${element.jobTitle}, Annual Salary: ${element.annualSalary} <button class = 'deleteButton'>Delete</button>`)
     }
 }
 

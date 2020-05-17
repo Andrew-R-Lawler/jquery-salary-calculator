@@ -1,3 +1,113 @@
 .red{
     background-color: red;
 }
+
+body {
+  background-image: url(OfficeBackground.jpg);
+  background-size: cover;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  background-color: Black;
+  color: White;
+  padding: 45px;
+  width: 480px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+}
+
+.input {
+  display: grid;
+    background-color: Black;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  color: white;
+  text-align: center;
+  width: 320px;
+  margin: auto;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+  opacity: .75;
+
+}
+
+input {
+  text-align: center;
+  background-color: Black;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px;
+  width: 240px;
+  margin: auto;
+  color: white;
+  opacity: .75;
+}
+
+button {
+  text-align: center;
+  background-color: Black;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px;
+  width: 240px;
+  color: white;
+  margin: auto;
+}
+
+ul {
+  background-color: Black;
+  color: White;
+  padding: 30px;
+  width: 480px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  align-content: center;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+  opacity: .75;
+}
+
+.deleteButton {
+  text-align: center;
+  background-color: Black;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px;
+  width: 120px;
+  color: white;
+  margin: auto;
+}
+
+h3 {
+  background-color: Black;
+  color: White;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  border-style: outset;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 2px;
+}
