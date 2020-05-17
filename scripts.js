@@ -9,11 +9,12 @@ let intTotalMonthlyCost = 0;
 function onReady() {
     console.log('in jquery');
     $('#submitButton').on('click', handleSubmit);
+    $('#list').on('click', '#deleteButton', removeEmployee);
 }
 
 function handleSubmit(){
     console.log('in handleSubmit');
-    
+
     let newEmpObject = {
         firstName: $('#firstName').val(),
         lastName: $('#lastName').val(),
@@ -29,6 +30,7 @@ function handleSubmit(){
     $('#jobTitle').val('');
     $('#annualSalary').val('');
     monthlyCost(employees);
+    appendToDom(employees);
 }
 
 function monthlyCost(array){
@@ -56,13 +58,20 @@ function totalMonthlyCost(array) {
     redAlert(intTotalMonthlyCost);
 }
 
-function appendToDom(value){
-    $('#monthlyCosts').empty();
-    $('#monthlyCosts').append(value)
+function appendToDom(array){
+    $('#list').empty();
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        $('#list').append(`<li>${element.firstName} ${element.lastName}; ID Number: ${element.idNumber}, Job Title: ${element.jobTitle}, Annual Salary: ${element.annualSalary} <button id = 'deleteButton'>Delete</button>`)
+    }
 }
 
 function redAlert(value){
     if (value >=20000) {
         $('.costBackground').addClass('red')
     }
+}
+
+function removeEmployee() {
+    $(this).parent().remove();
 }
